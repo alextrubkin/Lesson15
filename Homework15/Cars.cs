@@ -12,6 +12,7 @@ namespace Homework15
         private List<Car> CarsColletion { get; set; }
         public int Length { get => CarsColletion.Count; }
 
+
         public Cars()
         {
             CarsColletion = new List<Car>();
@@ -35,10 +36,9 @@ namespace Homework15
 
         public IEnumerable GetCarsInfo(int idMultiply)
         {
-
             for (int i = 0; i < Length; i++)
             {
-                if (CarsColletion[i].ID%idMultiply ==0 )
+                if (CarsColletion[i].ID % idMultiply == 0)
                 {
                     yield return CarsColletion[i];
                 }
@@ -46,7 +46,6 @@ namespace Homework15
             }
             yield break;
         }
-
 
         public void Add(params Car[] cars)
         {

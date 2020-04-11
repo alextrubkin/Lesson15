@@ -10,6 +10,10 @@ namespace Homework15
     {
         static void Main(string[] args)
         {
+            // Adjusting holders.
+            Validation.SetMessageHandler(Display);
+            Validation.SetInputTypeHandler(StringInput);
+
             Cars cars = new Cars();
 
             Car car1 = new Car("First", 1, 1000);
@@ -46,18 +50,31 @@ namespace Homework15
 
 
             Console.Clear();
-            int multiply = 3;
-            Console.WriteLine($"\nCar info using yield (view the cars which ID is a multiply of {multiply}):");
+            Console.Write("Input a multiply for ID to view some specific cars (recommended: 3): ");
+
+            int multiply = Validation.DoIntValidation();
+
+            Console.Clear();
+            Console.WriteLine($"Car info using yield (view the cars which ID is a multiply of {multiply}):");
             foreach (var item in cars.GetCarsInfo(multiply))
             {
                 Console.WriteLine(item);
             }
 
-            Console.Write("\nAny key to quit. . .");           
+            Console.Write("\nAny key to quit. . .");
 
 
             Console.ReadKey();
         }
-    }
 
+        public static string StringInput()
+        {
+            return Console.ReadLine();
+        }
+
+        public static void Display(string mes)
+        {
+            Console.Write(mes);
+        }
+    }
 }

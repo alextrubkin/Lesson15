@@ -23,7 +23,7 @@ namespace Homework15
 
         public override string ToString()
         {
-            return $"Name: {Name}, number: {ID:d3}, price: {Price} $.";
+            return $"Name: {Name}, ID: {ID:d3}, price: {Price} $.";
         }
     }
 }
