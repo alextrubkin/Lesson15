@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Homework15.DelegateHolder;
+﻿using static Homework15.DelegateHolder;
 
 namespace Homework15
 {
-   
-
     public static class Validation
     {
         private static MessageHandler _message;

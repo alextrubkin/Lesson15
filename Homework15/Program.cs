@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Homework15
 {
     public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            // Adjusting holders.
+            // Setting values for the handlers.
             Validation.SetMessageHandler(Display);
             Validation.SetInputTypeHandler(StringInput);
 
+
+            // Initialiing Enumerable class Cars, adding cars.
             Cars cars = new Cars();
 
             Car car1 = new Car("First", 1, 1000);
@@ -25,9 +23,11 @@ namespace Homework15
             Car car9 = new Car("Ninth", 9, 9000);
             Car car12 = new Car("Twelfth", 12, 12000);
 
-
             cars.Add(car1, car2, car3, car4, car5, car6, car9, car12);
 
+
+            // Playing with yield.
+            // Regular "Foreach" implementation.
             Console.WriteLine("Car info using forech:");
             foreach (var item in cars)
             {
@@ -37,7 +37,7 @@ namespace Homework15
             Console.Write("\nAny key to continue. . .");
             Console.ReadKey();
 
-
+            // Regular "foreach" implementation with yield keyword.
             Console.Clear();
             Console.WriteLine("Car info using yield (all cars in list):");
             foreach (var item in cars.GetCarsInfo())
@@ -49,6 +49,7 @@ namespace Homework15
             Console.ReadKey();
 
 
+            // Custom "foreach" implementation with yield keyword.
             Console.Clear();
             Console.Write("Input a multiply for ID to view some specific cars (recommended: 3): ");
 
@@ -62,7 +63,6 @@ namespace Homework15
             }
 
             Console.Write("\nAny key to quit. . .");
-
 
             Console.ReadKey();
         }
