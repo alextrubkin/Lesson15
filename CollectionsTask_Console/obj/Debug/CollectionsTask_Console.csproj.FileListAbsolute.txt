@@ -1,0 +1,7 @@
+C:\Users\Moisha\source\repos\CollectionsTask\CollectionsTask_Console\bin\Debug\CollectionsTask_Console.exe.config
+C:\Users\Moisha\source\repos\CollectionsTask\CollectionsTask_Console\bin\Debug\CollectionsTask_Console.exe
+C:\Users\Moisha\source\repos\CollectionsTask\CollectionsTask_Console\bin\Debug\CollectionsTask_Console.pdb
+C:\Users\Moisha\source\repos\CollectionsTask\CollectionsTask_Console\obj\Debug\CollectionsTask_Console.csprojAssemblyReference.cache
+C:\Users\Moisha\source\repos\CollectionsTask\CollectionsTask_Console\obj\Debug\CollectionsTask_Console.csproj.CoreCompileInputs.cache
+C:\Users\Moisha\source\repos\CollectionsTask\CollectionsTask_Console\obj\Debug\CollectionsTask_Console.exe
+C:\Users\Moisha\source\repos\CollectionsTask\CollectionsTask_Console\obj\Debug\CollectionsTask_Console.pdb
