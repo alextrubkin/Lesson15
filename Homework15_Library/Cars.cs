@@ -1,17 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace Homework15
+namespace Homework15_Library
 {
-    public class Cars : IEnumerable
+    public class Cars<T> : IEnumerable where T : Car
     {
-        private List<Car> CarsColletion { get; set; }
+        private List<T> CarsColletion { get; set; }
         public int Length { get => CarsColletion.Count; }
 
 
         public Cars()
         {
-            CarsColletion = new List<Car>();
+            CarsColletion = new List<T>();
         }
 
 
@@ -32,20 +32,20 @@ namespace Homework15
 
         public IEnumerable GetCarsInfo(int idMultiply)
         {
+
             for (int i = 0; i < Length; i++)
             {
                 if (CarsColletion[i].ID % idMultiply == 0)
                 {
                     yield return CarsColletion[i];
                 }
-
             }
             yield break;
         }
 
-        public void Add(params Car[] cars)
+        public void Add(params T[] items)
         {
-            CarsColletion.AddRange(cars);
+            CarsColletion.AddRange(items);
         }
     }
 }

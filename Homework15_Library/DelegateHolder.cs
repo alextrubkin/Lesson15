@@ -1,4 +1,4 @@
-﻿namespace Homework15
+﻿namespace Homework15_Library
 {
     public static class DelegateHolder
     {

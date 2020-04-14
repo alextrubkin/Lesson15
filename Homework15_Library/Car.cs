@@ -1,7 +1,8 @@
-﻿namespace Homework15
+﻿namespace Homework15_Library
 {
     public class Car
     {
+        public virtual string CarType { get; } = "New car";
         public string Name { get; private set; }
         public int ID { get; private set; }
         public decimal Price { get; private set; }
@@ -20,4 +21,5 @@
             return $"Name: {Name}, ID: {ID:d3}, price: {Price} $.";
         }
     }
+
 }

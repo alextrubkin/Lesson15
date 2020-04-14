@@ -1,6 +1,6 @@
-﻿using static Homework15.DelegateHolder;
+﻿using static Homework15_Library.DelegateHolder;
 
-namespace Homework15
+namespace Homework15_Library
 {
     public static class Validation
     {
