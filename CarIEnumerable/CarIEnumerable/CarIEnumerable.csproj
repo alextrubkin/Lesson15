@@ -43,17 +43,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car.cs" />
-    <Compile Include="CarCollection.cs" />
-    <Compile Include="CarsOwnCollection.cs" />
-    <Compile Include="NumberUserCollection.cs" />
-    <Compile Include="EnumsCarBody.cs" />
-    <Compile Include="MyEnumerator.cs" />
+    <Compile Include="Classes\Bike.cs" />
+    <Compile Include="Classes\Car.cs" />
+    <Compile Include="Classes\CarCollection.cs" />
+    <Compile Include="Classes\CarsOwnCollection.cs" />
+    <Compile Include="Classes\ChildBike.cs" />
+    <Compile Include="Enums\EnumColor.cs" />
+    <Compile Include="Interfaces\IPresent.cs" />
+    <Compile Include="Classes\PresentBox.cs" />
+    <Compile Include="Interfaces\IMoving.cs" />
+    <Compile Include="Interfaces\IHeap.cs" />
+    <Compile Include="Classes\NumberUserCollection.cs" />
+    <Compile Include="Enums\EnumsCarBody.cs" />
+    <Compile Include="Classes\MyEnumerator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\TCastomCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
