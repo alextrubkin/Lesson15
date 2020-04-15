@@ -2,16 +2,16 @@ using System.Collections;
 
 namespace Cars
 {
-    public class Cars : IEnumerable
+    public class Cars<T> : IEnumerable
     {
-        private readonly Car[] cars;
+        private readonly T[] cars;
 
-        public Cars(Car[] newCars)
+        public Cars()
         {
-            cars = newCars;
+            cars = new T[4];
         }
 
-        public Car this[int index]
+        public T this[int index]
         {
             get => cars[index];
             set
@@ -20,7 +20,7 @@ namespace Cars
             }
         }
 
-        public IEnumerator GetEnumerator()
+        IEnumerator IEnumerable.GetEnumerator()
         {
             foreach (var car in cars)
             {

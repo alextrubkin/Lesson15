@@ -6,13 +6,12 @@ namespace Cars
     {
         public static void Main(string[] args)
         {
-            var carsCollection = new Cars(
-                new[]{
-                    new Car("Red", 4),
-                    new Car("Blue", 6),
-                    new Car("Green", 8),
-                    new Car("White", 6),
-                });
+            var carsCollection = new Cars<Car>();
+
+            carsCollection[0] = new Car("Red", 4);
+            carsCollection[1] = new Car("Blue", 6);
+            carsCollection[2] = new Car("Green", 8);
+            carsCollection[3] = new Car("White", 6);
 
             Console.WriteLine(new string('-', 45));
 
