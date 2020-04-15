@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CollectionsTask_Console.Collection;
 
 namespace CollectionsTask_Console
@@ -11,10 +7,10 @@ namespace CollectionsTask_Console
     {
         public static void Main(string[] args)
         {
-            var cars = new Cars();
+            var cars = new Cars<Car>();
 
             cars[0] = new Car("Mazda", "Red", 150);
-            cars[1] = new Car("Honda", "Blue", 130);
+            cars[1] = new Van("Honda", "Blue", 130);
             cars[2] = new Car("Mitsubishi", "Grey", 170);
             cars[3] = new Car("Zhiguli", "Yellow", 100);
 

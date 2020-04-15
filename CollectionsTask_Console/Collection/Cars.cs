@@ -1,24 +1,20 @@
-﻿using System;
-using System.Collections;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections;
 
 namespace CollectionsTask_Console.Collection
 {
-    public class Cars : IEnumerable, IEnumerator
+    public class Cars<T> : IEnumerable, IEnumerator
     {
         private int position = -1;
 
-        readonly Car[] cars;
+        readonly T[] cars;
 
         public Cars()
         {
-            cars = new Car[4];
+            cars = new T[4];
             Length = cars.Length;
         }
 
-        public Car this[int index]
+        public T this[int index]
         {
             get => cars[index];
             set => cars[index] = value;
@@ -51,7 +47,7 @@ namespace CollectionsTask_Console.Collection
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            foreach(Car car in cars)
+            foreach(T car in cars)
             {
                 yield return car;
             }

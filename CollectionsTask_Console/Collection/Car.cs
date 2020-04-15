@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CollectionsTask_Console.Collection
+﻿namespace CollectionsTask_Console.Collection
 {
     public class Car
     {
@@ -17,9 +11,9 @@ namespace CollectionsTask_Console.Collection
             MaxSpeed = maxSpeed;
         }
 
-        public string Name { get; }
+        public string Name { get; set; }
 
-        public string Color { get; }
+        public string Color { get; set; }
 
         public int MaxSpeed
         {
