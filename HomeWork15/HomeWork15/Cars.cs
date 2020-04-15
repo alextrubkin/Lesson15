@@ -1,18 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Collections;
+﻿using System.Collections;
 
 namespace HomeWork15
 {
-    public class Cars : IEnumerable
+    public class Cars<T> : IEnumerable
     {
-        List<Car> cars { get; set; }
+        readonly T[] cars = new T[5];
 
-        public Cars()
-        {
-            cars = new List<Car>();
-        }
-
-        public Car this[int index]
+        public T this[int index]
         {
             get
             {
@@ -24,31 +18,15 @@ namespace HomeWork15
             }
         }
 
-        public void AddNewCar(Car car)
-        {
-            cars.Add(car);
-        }
-        public IEnumerator GetEnumerator()
+        IEnumerator IEnumerable.GetEnumerator()
         {
             return cars.GetEnumerator();
         }
 
-        public IEnumerable GetYellowCars()
+        public IEnumerable YieldImplementation()
         {
-            for (int i = 0; i < cars.Count - 1; i++)
+            for (int i = 0; i < cars.Length; i++)
             {
-                if (cars[i].Color== Color.yellow)
-                {
-                    yield return cars[i];
-                }
-            }
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            for (int i = 0; i < cars.Count; i++)
-            {
-                yield return cars[i];
                 yield return cars[i];
             }
         }

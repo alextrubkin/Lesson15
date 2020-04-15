@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 
 namespace HomeWork15
 {
@@ -7,44 +6,33 @@ namespace HomeWork15
     {
         public static void Main(string[] args)
         {
-            var carsCollection = new Cars();
+            var carsCollection1 = new Cars<Car<int>>();
 
-            carsCollection.AddNewCar(new Car("Volvo", "3108AX", Color.green));
-            carsCollection.AddNewCar(new Car("Renaut", "4532HA", Color.yellow));
-            carsCollection.AddNewCar(new Car("Dodge", "9976KA", Color.white));
-            carsCollection.AddNewCar(new Car("Honda", "5427AH", Color.yellow));
-            carsCollection.AddNewCar(new Car("Mercedes", "7744HP", Color.yellow));
-            carsCollection.AddNewCar(new Car("Volvo", "3108AС", Color.green));
-            carsCollection.AddNewCar(new Car("Renaut", "4534HA", Color.red));
-            carsCollection.AddNewCar(new Car("Dodge", "3336KA", Color.white));
-            carsCollection.AddNewCar(new Car("Honda", "1237AH", Color.black));
-            carsCollection.AddNewCar(new Car("Mercedes", "9874HP", Color.yellow));
+            carsCollection1[0] = new Car<int>("Volvo", "3108AX", Color.green, 42);
+            carsCollection1[1] = new Car<int>("Renaut", "4532HA", Color.yellow, 50);
+            carsCollection1[2] = new Car<int>("Dodge", "9976KA", Color.white, 55);
+            carsCollection1[3] = new Car<int>("Honda", "5427AH", Color.yellow, 40);
+            carsCollection1[4] = new Car<int>("Mercedes", "7744HP", Color.yellow, 38);
 
-
-            //Implementation of foreach:
-
-            foreach (Car cars in carsCollection)
+            foreach (var item in carsCollection1)
             {
-                Console.WriteLine(cars.ToString());
+                Console.WriteLine(item.ToString());
             }
 
-            Console.WriteLine("==================================================================");
+            Console.WriteLine("====================================================================================================");
 
-            //Implementation of "yield" 1:
+            var vansCollection2 = new Cars<Car<string>>();
 
-            IEnumerable enumerableColor = carsCollection as IEnumerable;
-            foreach (var item in enumerableColor)
+            vansCollection2[0] = new Van<string>("Volvo", "3108AС", Color.green, "45");
+            vansCollection2[1] = new Minivan<string>("Renaut", "4534HA", Color.red, "40");
+            vansCollection2[2] = new Pickup<string>("Dodge", "3336KA", Color.white, "52");
+            vansCollection2[3] = new Van<string>("Honda", "1237AH", Color.black, "44");
+            vansCollection2[4] = new Van<string>("Mercedes", "9874HP", Color.yellow, "42");
+
+
+            foreach (var item in vansCollection2.YieldImplementation())
             {
-                Console.WriteLine(item);
-            }
-
-            Console.WriteLine("==================================================================");
-
-            //Implementation of "yield" 2:
-
-            foreach (Car cars in carsCollection.GetYellowCars())
-            {
-                Console.WriteLine(cars.ToString());
+                Console.WriteLine(item.ToString());
             }
 
             Console.ReadKey();
