@@ -8,11 +8,11 @@
             Price = price;
             Name = name;
         }
-        public string Color { get; set; }
+        public virtual string Color { get; set; }
 
-        public int Price { get; set; }
+        public virtual int Price { get; set; }
 
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
         public override string ToString()
         {

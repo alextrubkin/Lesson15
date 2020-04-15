@@ -4,8 +4,10 @@ namespace Homework15
 {
     public class Cars : IEnumerable
     {
+
         readonly Car[] cars;
-        public Cars(Car[] newCars)
+        public Car[] newCars;
+        public Cars()
         {
             cars = newCars;
         }
@@ -15,6 +17,7 @@ namespace Homework15
             get { return cars[index]; }
             set { cars[index] = value; }
         }
+
         public IEnumerator GetEnumerator()
         {
             foreach (var car in cars)
@@ -27,5 +30,6 @@ namespace Homework15
                 yield return cars[i];
             }
         }
+
     }
 }

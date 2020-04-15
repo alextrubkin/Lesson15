@@ -6,22 +6,19 @@ namespace Homework15
     {
         public static void Main(string[] args)
         {
-            var cars = new Cars(new[]
-            {
+            Car bus = new Bus("yellow", 26, "Mazda");
+            Car minivan = new Minivan("white", 23, "BMW");
+            Car van = new Van("black", 18, "BMW");
 
-                new Car("white", 23, "BMW"),
-                new Car("red", 40, "Bentley"),
-                new Car("lack", 25, "Ferrari"),
-                new Car("yellow", 26, "Mazda"),
-                new Car("black", 18, "BMW"),
-                new Car("green", 36, "Ford"),
-                new Car("white", 28, "Lexus"),
-            });
+            IContainer<Bus> container = new Container<Car>(bus);
+            IContainer<Minivan> container1 = new Container<Car>(minivan);
+            IContainer<Van> container2 = new Container<Car>(van);
 
-            foreach (var car in cars)
-            {
-                Console.WriteLine(car.ToString());
-            }
+            Console.WriteLine(container.ToString());
+            Console.WriteLine(container1.ToString());
+            Console.WriteLine(container2.ToString());
+
+
             Console.ReadLine();
         }
     }
