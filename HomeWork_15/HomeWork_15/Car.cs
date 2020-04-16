@@ -2,18 +2,22 @@
 
 namespace HomeWork_15
 {
-    public class Car
+    public abstract class Car<T>
     {
         private string _name;
         private string _id;
         private decimal _price = 1;
+        
         public Car(string name, string id, Color color, decimal price)
         {
             Name = name;
             Id = id;
             Color = color;
-            Price = price;
+            Price = price;            
         }
+        public virtual TypeOfVehicle Type { get; }
+        
+      
         public string Name
         {
             get => _name;
@@ -54,8 +58,7 @@ namespace HomeWork_15
         }
         public override string ToString()
         {
-            return $"Name: {Name} with ID {Id}, Color: {Color} and Price {Price}" ;
-        }
-    }
-   
+            return $"|Type vehicle: {Type.ToString()}|\n\n name: {Name} with ID {Id}, Color: {Color} and Price {Price}";
+        }       
+    }   
 }

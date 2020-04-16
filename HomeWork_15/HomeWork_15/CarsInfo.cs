@@ -1,47 +1,28 @@
 ﻿
 using System.Collections;
-using System.Collections.Generic;
+
 
 namespace HomeWork_15
 {
-    public class CarsInfo : IEnumerable
+    public class CarsInfo<T> : IEnumerable
     {
-        List<Car> cars { get; set; }
-        public CarsInfo()
-        {
-            cars = new List<Car>();
-        }      
+        
+        public T[] cars = new T[6];
 
-        public Car this[int index]
+        public T this[int index]
         {
-            get { return cars[index]; }
-            set { cars[index] = value; }
+            get=>cars[index];            
+            set=>cars[index] = value;            
         }
-               
-        public void AddCar(Car car)
-        {
-            cars.Add(car);
-        }
-       
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return (IEnumerator)this;
-        }
-        public IEnumerator GetEnumerator()
+            return cars.GetEnumerator();
+        }      
+        public IEnumerable RealizationYield()
         {
-            for (int i = 0; i < cars.Count; i++)
+            for (int i = 0; i < cars.Length - 1; i++)
             {
                 yield return cars[i];
-            }
-        }
-        public IEnumerable GetCarCheaper1000()
-        {
-            for (int i = 0; i < cars.Count - 1; i++)
-            {
-                if (cars[i].Price <=1000 )
-                {
-                    yield return cars[i];
-                }
             }
         }
     }

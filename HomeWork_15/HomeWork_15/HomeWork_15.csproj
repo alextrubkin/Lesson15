@@ -48,6 +48,13 @@
     <Compile Include="Color.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StorageVehicle\Bycycle.cs" />
+    <Compile Include="StorageVehicle\Minivan.cs" />
+    <Compile Include="StorageVehicle\Sedan.cs" />
+    <Compile Include="StorageVehicle\Tank.cs" />
+    <Compile Include="StorageVehicle\Truck.cs" />
+    <Compile Include="StorageVehicle\Van.cs" />
+    <Compile Include="TypeOfVehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
