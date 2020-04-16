@@ -8,11 +8,11 @@
             Price = price;
             Name = name;
         }
-        public override string Color { get; set; }
+        public new string Color { get; set; }
 
-        public override int Price { get; set; }
+        public new int Price { get; set; }
 
-        public override string Name { get; set; }
+        public new string Name { get; set; }
 
     }
 }

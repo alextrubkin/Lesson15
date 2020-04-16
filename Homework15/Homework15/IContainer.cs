@@ -1,7 +1,7 @@
 ﻿namespace Homework15
 {
-    public interface IContainer<in T>
+    public interface IContainer<out T>
     {
-        T Cars { set; }
+        T Cars { get; }
     }
 }

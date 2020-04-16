@@ -2,14 +2,26 @@
 
 namespace Homework15
 {
-    public class Cars : IEnumerable
+    public class Cars<T> : IContainer<T>, IEnumerable
     {
 
         readonly Car[] cars;
-        public Car[] newCars;
-        public Cars()
+        private T car;
+        public Cars(T car)
         {
-            cars = newCars;
+            this.car = car;
+        }
+
+        public T Car
+        {
+            set { car = value; }
+        }
+
+        T IContainer<T>.Cars { get; }
+
+        public override string ToString()
+        {
+            return car.ToString();
         }
 
         public Car this[int index]

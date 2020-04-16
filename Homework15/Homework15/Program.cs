@@ -10,9 +10,9 @@ namespace Homework15
             Car minivan = new Minivan("white", 23, "BMW");
             Car van = new Van("black", 18, "BMW");
 
-            IContainer<Bus> container = new Container<Car>(bus);
-            IContainer<Minivan> container1 = new Container<Car>(minivan);
-            IContainer<Van> container2 = new Container<Car>(van);
+            IContainer<Car> container = new Cars<Car>(bus);
+            IContainer<Car> container1 = new Cars<Car>(minivan);
+            IContainer<Car> container2 = new Cars<Car>(van);
 
             Console.WriteLine(container.ToString());
             Console.WriteLine(container1.ToString());

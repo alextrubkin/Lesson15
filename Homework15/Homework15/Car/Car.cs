@@ -2,6 +2,7 @@
 {
     public class Car
     {
+        private double _price = 1;
         public Car(string color, int price, string name)
         {
             Color = color;
@@ -10,7 +11,7 @@
         }
         public virtual string Color { get; set; }
 
-        public virtual int Price { get; set; }
+        public virtual double Price {get; set;}
 
         public virtual string Name { get; set; }
 
