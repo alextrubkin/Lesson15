@@ -2,7 +2,7 @@ using System.Collections;
 
 namespace Cars
 {
-    public class Cars<T> : IEnumerable
+    public class Cars<T> : IEnumerable where T : Car
     {
         private readonly T[] cars;
 
