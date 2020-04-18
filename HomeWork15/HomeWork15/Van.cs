@@ -5,7 +5,7 @@
         public Van(string name, string number, Color color, T volumeTank) : base(name, number, color, volumeTank)
         {
         }
-        private TypeOfCar TypeOfCar => TypeOfCar.van;
+        public override TypeOfCar TypeOfCar => TypeOfCar.van;
 
         public override string ToString()
         {

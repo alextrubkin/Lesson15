@@ -5,7 +5,7 @@
         public Pickup(string name, string number, Color color, T volumeTank) : base(name, number, color, volumeTank)
         {
         }
-        private TypeOfCar TypeOfCar => TypeOfCar.pickup;
+        public override TypeOfCar TypeOfCar => TypeOfCar.pickup;
 
         public override string ToString()
         {

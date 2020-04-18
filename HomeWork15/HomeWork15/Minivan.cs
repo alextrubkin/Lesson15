@@ -6,7 +6,7 @@
         {
 
         }
-        private TypeOfCar TypeOfCar => TypeOfCar.minivan;
+        public override TypeOfCar TypeOfCar => TypeOfCar.minivan;
 
         public override string ToString()
         {

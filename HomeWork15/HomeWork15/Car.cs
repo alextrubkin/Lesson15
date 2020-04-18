@@ -1,6 +1,7 @@
-﻿namespace HomeWork15
+﻿
+namespace HomeWork15
 {
-    public class Car<T>
+    public class Car<T>:Vehicle
     {
         private string _name;
         private string _number;
@@ -14,6 +15,8 @@
             _volumeTank = volumeTank;
         }
 
+        private string TypeOfVehicle => "Car";
+        public virtual TypeOfCar TypeOfCar { get; }
         public string Name
         {
             get => _name;
@@ -43,7 +46,7 @@
 
         public override string ToString()
         {
-            return $"Name: {Name,10}|\tNumber: {Number,10}|\tColor: {Color,10}|\t Volume of tank: {_volumeTank,5}|";
+            return $"Type of vehicle: {TypeOfVehicle,5}|\tName: {Name,10}|\tNumber: {Number,10}|\tColor: {Color,10}|\t Volume of tank: {_volumeTank,5}|";
         }
     }
 }

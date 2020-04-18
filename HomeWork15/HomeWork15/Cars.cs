@@ -2,7 +2,7 @@
 
 namespace HomeWork15
 {
-    public class Cars<T> : IEnumerable
+    public class Cars<T> :IEnumerable where T:Vehicle
     {
         readonly T[] cars = new T[5];
 
